@@ -1,0 +1,17 @@
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/**
+* This is a fix for Android, as the poster seems to be zoomed if we don't set object-fit to "none"
+**/
+:host-context(.plt-android) video[poster]{
+  object-fit: none;
+}
