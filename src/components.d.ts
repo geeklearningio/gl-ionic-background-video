@@ -22,46 +22,15 @@ export namespace Components {
     'poster'?: string;
     'src'?: string;
   }
-
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
-  }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
-  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'GlBackgroundVideo': Components.GlBackgroundVideo;
-    'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
     'gl-background-video': Components.GlBackgroundVideoAttributes;
-    'my-component': Components.MyComponentAttributes;
   }
 
 
@@ -71,20 +40,12 @@ declare global {
     new (): HTMLGlBackgroundVideoElement;
   };
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-
   interface HTMLElementTagNameMap {
     'gl-background-video': HTMLGlBackgroundVideoElement
-    'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
     'gl-background-video': HTMLGlBackgroundVideoElement;
-    'my-component': HTMLMyComponentElement;
   }
 
 

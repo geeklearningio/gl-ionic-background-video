@@ -8,13 +8,17 @@ This is a very simple Web Component for Ionic 4 applications to have a fullscree
 
 Turns out there are many tweaks to do to make it work perfectly, like we need for a clean and profesionnal app. So I figured I would save you the trouble.
 
-## Installation
-
 ### Remarks
 
 The video will not play on iOS 9 and less.
 
-### Manual modification
+This component is designed to play a video that is already on the device.
+
+## Installation
+
+## Usage
+
+### Manual modifications
 
 You have to allow inline media playback in your Cordova `config.xml`, otherwise it will not play on iOS :
 

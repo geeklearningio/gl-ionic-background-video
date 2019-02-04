@@ -2,9 +2,10 @@ import { Component, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'gl-background-video',
-  styleUrl: 'gl-background-video.css'
+  styleUrl: 'gl-background-video.css',
+  shadow: true
 })
-export class MyComponent {
+export class GLBackgroundVideoComponent {
   @Prop() src: string;
   @Prop() poster: string;
   @Prop() muted: boolean = true;

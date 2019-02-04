@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 
 export const config: Config = {
-  namespace: 'mycomponent',
+  namespace: 'gl-background-video',
   outputTargets:[
     { type: 'dist' },
     { type: 'docs' },
