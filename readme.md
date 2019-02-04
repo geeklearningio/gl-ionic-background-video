@@ -8,7 +8,7 @@ This is a very simple Web Component for *Ionic 4* applications to have a *fullsc
 
 Turns out there are many tweaks to do to make it work perfectly, like we need for a clean and profesionnal app. So I figured I would save you the trouble.
 
-### Remarks
+## Remarks
 
 The video will not play correctly on iOS 9 and less. it was not supported yet: https://webkit.org/blog/6784/new-video-policies-for-ios/
 
