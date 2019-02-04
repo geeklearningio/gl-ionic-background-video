@@ -2,7 +2,7 @@
 
 # Ionic Background Video Web Component
 
-This is a very simple Web Component for Ionic 4 applications to have a fullscreen video playing in the background of a page.
+This is a very simple Web Component for *Ionic 4* applications to have a *fullscreen video playing in the background of a page*.
 
 ## Why make a Web component?
 
@@ -10,20 +10,69 @@ Turns out there are many tweaks to do to make it work perfectly, like we need fo
 
 ### Remarks
 
-The video will not play on iOS 9 and less.
+The video will not play correctly on iOS 9 and less. it was not supported yet: https://webkit.org/blog/6784/new-video-policies-for-ios/
 
 This component is designed to play a video that is already on the device.
 
-## Installation
 
-## Usage
+## How to use it with you Ionic App
+
+For more information about importing it in your app, refer to the Stencil documentation: https://stenciljs.com/docs/angular
 
 ### Manual modifications
 
-You have to allow inline media playback in your Cordova `config.xml`, otherwise it will not play on iOS :
+First, you have to allow inline media playback in your Cordova `config.xml`, otherwise it will not work on iOS :
 
 ```
 <preference name="AllowInlineMediaPlayback" value="true" />
 ```
 
+### Install with npm
+
+Install this Web Component with NPM:
+
+```
+npm install --save gl-ionic-background-video
+```
+
+### Import it
+
+Import it in the module of the page which will use it (home.module.ts for example):
+```
+import 'gl-ionic-background-video';
+```
+
+### Include the Custom Element Schema
+
+You also need to tell your page's module to allow non-angular elements. Add the `CUSTOM_ELEMENTS_SCHEMA` to the list of schemas of you module:
+
+```
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomePage
+      }
+    ])
+  ],
+  declarations: [HomePage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA] // here is the schema declaration to add
+})
+export class HomePageModule {}
+```
+
+### Call defineCustomElements
+Call the defineCustomElements function from the Stencil component collection in your `main.ts` like this:
+```
+import { defineCustomElements } from 'gl-ionic-background-video/dist/loader'; // add this line
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.log(err)); // This is already in main.ts, it's just to show you where to put everything.
+  
+defineCustomElements(window); // call the function here
+```
 
