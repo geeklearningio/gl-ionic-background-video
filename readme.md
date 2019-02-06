@@ -88,3 +88,8 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 defineCustomElements(window); // call the function here
 ```
 
+### Usage
+This Web Components accepts 3 parameters :
+  - The video source : src
+  - The fallback image : poster
+  - The mute state of the video : muted
