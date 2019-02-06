@@ -1,6 +1,6 @@
 {
   "name": "gl-ionic-background-video",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Stencil Component for a fullscreen video playing in the background of a Ionic page",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
