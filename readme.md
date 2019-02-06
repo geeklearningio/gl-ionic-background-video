@@ -21,10 +21,22 @@ For more information about importing it in your app, refer to the Stencil docume
 
 ### Manual modifications
 
+#### config.xml
+
 First, you have to allow inline media playback in your Cordova `config.xml`, otherwise it will not work on iOS :
 
 ```
 <preference name="AllowInlineMediaPlayback" value="true" />
+```
+
+#### ion-content
+
+You don't want your ion-content to scroll at all on this page, so you need to set it's `force-overscroll` attribute to false:
+
+```
+<ion-content force-overscroll="false">
+  <gl-background-video src="assets/your_video.mp4" poster="assets/your_video_screen.png"></gl-background-video>
+</ion-content>
 ```
 
 ### Install with npm
@@ -76,3 +88,8 @@ platformBrowserDynamic().bootstrapModule(AppModule)
 defineCustomElements(window); // call the function here
 ```
 
+### Usage
+This Web Components accepts 3 parameters :
+  - The video source : src
+  - The fallback image : poster
+  - The mute state of the video : muted
