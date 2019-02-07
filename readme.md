@@ -17,6 +17,8 @@ This component is designed to play a video that is already on the device.
 
 ## How to use it with you Ionic App
 
+I actually made an article on our blog explaining how to do that: https://geeklearning.io/how-to-create-a-reusable-web-component-with-stenciljs-and-use-it-in-your-ionic-4-application/
+
 For more information about importing it in your app, refer to the Stencil documentation: https://stenciljs.com/docs/angular
 
 ### Manual modifications
